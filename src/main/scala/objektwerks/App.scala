@@ -8,7 +8,13 @@ import gears.async.default.given
 import scala.concurrent.duration.DurationInt
 
 @main
-def runApp: Unit = ???
+def runApp: Unit =
+  future()
+  futures()
+  select()
+  timeout()
+  retry()
+  channel()
 
 private def future(): Unit =
   Async.blocking:
