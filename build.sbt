@@ -4,7 +4,7 @@ enablePlugins(ScalaNativePlugin)
 
 name := "gears.native"
 organization := "objektwerks"
-version := "0.1-SNAPSHOT"
+version := "0.1"
 scalaVersion := "3.4.2"
 libraryDependencies ++= {
   Seq(
