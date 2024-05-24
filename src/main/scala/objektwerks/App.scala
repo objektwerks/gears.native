@@ -50,3 +50,14 @@ private def retry(): Unit =
       .withMaximumFailures(2)
       .withDelay( Delay.constant(3.seconds) ):
         println(s"* retry: ${getJoke()}")
+
+private def channel(): Unit =
+  Async.blocking:
+    val channel = SyncChannel[Int]()
+    val reader = Future:
+      channel.read().right.get
+    Async.select(
+      channel.sendSource( factorial(11) ).handle:
+        case Left(Closed) => println("* channel closed!")
+        case Right(()) => println(s"* channel reader > factorial of 11 = ${reader.await}")
+    )
