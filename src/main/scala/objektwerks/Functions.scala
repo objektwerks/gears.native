@@ -18,4 +18,12 @@ def reverse[A](list: List[A], acc: List[A] = List.empty[A]): List[A] =
     case Nil => acc
     case head :: tail => reverse(tail, head :: acc)
 
+def getJoke()(using Async): String =
+  val backend = CurlBackend()
+  val response: Response[String] = quickRequest
+    .get(url)
+    .send(backend)
+    
+    // println( s"*** Now Client response: ${response.body}" )
+
 private def parseJson(json: String): String = ujson.read(json)("value").str
