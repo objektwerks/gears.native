@@ -1,6 +1,6 @@
-Gears
------
->Gears feature tests using uJson and Scala 3, targeting the JVM ( not Scala Native ).
+Gears Native
+------------
+>Gears Native feature tests using uJson, Sttp and Scala 3.
 
 Note
 ----
