@@ -42,3 +42,11 @@ private def timeout(): Unit =
   Async.blocking:
     withTimeout(10.seconds):
       println(s"* timeout: ${getJoke()}")
+
+private def retry(): Unit =
+  Async.blocking:
+    Retry
+      .untilSuccess
+      .withMaximumFailures(2)
+      .withDelay( Delay.constant(3.seconds) ):
+        println(s"* retry: ${getJoke()}")
