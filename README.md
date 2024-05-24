@@ -10,6 +10,16 @@ Run
 ---
 1. sbt run
 
+Publish
+-------
+1. sbt clean compile nativeLink
+2. mv target/scala-{version}/scala-native-out target/scala-{version}/gears-app
+3. sudo cp target/scala-{version}/gears-app /usr/local/bin
+
+Execute
+-------
+1. gears-app
+
 Resources
 ---------
 * [Gears Github](https://github.com/lampepfl/gears)
