@@ -9,3 +9,8 @@ import scala.concurrent.duration.DurationInt
 
 @main
 def runApp: Unit = ???
+
+private def future(): Unit =
+  Async.blocking:
+    val joke = Future( getJoke() ).await
+    println(s"* future: $joke")
