@@ -31,10 +31,10 @@ def getJoke()(using Async): String =
  */
 
 def getJoke()(using Async): String =
-  val response: Response[String] = quickRequest
-    .get("https://api.chucknorris.io/jokes/random")
+  val json = quickRequest
+    .get( uri"https://api.chucknorris.io/jokes/random" )
     .send( CurlBackend() )
-    
-    // println( s"*** Now Client response: ${response.body}" )
+    .body
+  parseJson(json)
 
 private def parseJson(json: String): String = ujson.read(json)("value").str
