@@ -3,13 +3,9 @@ package objektwerks
 import gears.async.Async
 
 import scala.annotation.tailrec
-import scala.io.{Codec, Source}
-import scala.util.Using
 
 import sttp.client4.{quickRequest, UriContext}
 import sttp.client4.curl.CurlBackend
-import sttp.client4.Response
-import sttp.model.Uri
 
 @tailrec
 def factorial(n: Int, acc: Int = 1): Int =
