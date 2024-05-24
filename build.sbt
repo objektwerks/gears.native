@@ -19,3 +19,6 @@ scalacOptions ++= Seq(
 nativeConfig ~= {
   _.withMode(Mode.releaseFast)
 }
+nativeLinkingOptions ++= Seq(
+  "-L/opt/homebrew/lib"
+)
