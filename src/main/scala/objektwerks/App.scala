@@ -37,3 +37,8 @@ private def select(): Unit =
 
     )
     println(s"* $winner")
+
+private def timeout(): Unit =
+  Async.blocking:
+    withTimeout(10.seconds):
+      println(s"* timeout: ${getJoke()}")
