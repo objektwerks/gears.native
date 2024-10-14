@@ -5,7 +5,7 @@ enablePlugins(ScalaNativePlugin)
 name := "gears.native"
 organization := "objektwerks"
 version := "0.2-SNAPSHOT"
-scalaVersion := "3.5.1"
+scalaVersion := "3.5.2-RC2"
 libraryDependencies ++= {
   Seq(
     "ch.epfl.lamp" %%% "gears" % "0.2.0",
