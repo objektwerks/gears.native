@@ -13,8 +13,8 @@ Run
 Publish
 -------
 1. sbt clean compile nativeLink
-2. mv target/scala-3.7.0-RC3/scala-native-out target/scala-3.7.0-RC3/gears-app
-3. sudo cp target/scala-3.7.0-RC3/gears-app /usr/local/bin
+2. mv target/scala-3.7.0-RC4/scala-native-out target/scala-3.7.0-RC4/gears-app
+3. sudo cp target/scala-3.7.0-RC4/gears-app /usr/local/bin
 
 Execute
 -------
