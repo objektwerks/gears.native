@@ -1,6 +1,6 @@
 Gears Native
 ------------
->Gears Native feature tests using uJson, Sttp and Scala 3.
+>Scala Native Gears feature tests using uJson, Sttp and Scala 3.
 
 Build
 -----
