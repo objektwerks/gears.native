@@ -10,7 +10,7 @@ libraryDependencies ++= {
   Seq(
     "ch.epfl.lamp" %%% "gears" % "0.2.0",
     "com.softwaremill.sttp.client4" %%% "core" % "4.0.13",
-    "com.lihaoyi" %%% "ujson" % "4.4.2-RC"
+    "com.lihaoyi" %%% "ujson" % "4.4.2-RC2"
   )
 }
 scalacOptions ++= Seq(
