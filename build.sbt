@@ -9,7 +9,7 @@ scalaVersion := "3.8.1"
 libraryDependencies ++= {
   Seq(
     "ch.epfl.lamp" %%% "gears" % "0.2.0",
-    "com.softwaremill.sttp.client4" %%% "core" % "4.0.14",
+    "com.softwaremill.sttp.client4" %%% "core" % "4.0.15",
     "com.lihaoyi" %%% "ujson" % "4.4.2"
   )
 }
